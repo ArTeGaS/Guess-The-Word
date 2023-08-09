@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Play : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void PlayGameButton()
     {
-        
-    }
+        MenuMainScript.playButton.SetActive(false);
+        MenuMainScript.settingsButton.SetActive(false);
+        MenuMainScript.exitButton.SetActive(false);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        MenuMainScript.ingameBack.SetActive(true);
+        MenuMainScript.ingameNext.SetActive(true);
     }
 }

@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Settings : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SettingsGameButton()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        MenuMainScript.playButton.SetActive(false);
+        MenuMainScript.settingsButton.SetActive(false);
+        MenuMainScript.exitButton.SetActive(false);
     }
 }

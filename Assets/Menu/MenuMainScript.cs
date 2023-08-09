@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class MenuMainScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject playButtonObj;
+    public GameObject settingsButtonObj;
+    public GameObject exitButtonObj;
+    public GameObject ingameBackObj;
+    public GameObject ingameNextObj;
 
-    // Update is called once per frame
-    void Update()
+    public static GameObject playButton;
+    public static GameObject settingsButton;
+    public static GameObject exitButton;
+    public static GameObject ingameBack;
+    public static GameObject ingameNext;
+
+    private void Start()
     {
-        
+        playButton = playButtonObj;
+        settingsButton = settingsButtonObj;
+        exitButton = exitButtonObj;
+        ingameBack = ingameBackObj;
+        ingameNext = ingameNextObj;
     }
 }
