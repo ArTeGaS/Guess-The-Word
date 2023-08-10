@@ -12,5 +12,7 @@ public class Play : MonoBehaviour
 
         MenuMainScript.ingameBack.SetActive(true);
         MenuMainScript.ingameNext.SetActive(true);
+        MenuMainScript.ingameText.SetActive(true);
+        MenuMainScript.ingameInputField.SetActive(true);
     }
 }

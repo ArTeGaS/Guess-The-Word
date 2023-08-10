@@ -10,6 +10,7 @@ public class MenuMainScript : MonoBehaviour
     public GameObject ingameBackObj;
     public GameObject ingameNextObj;
     public GameObject ingameTextObj;
+    public GameObject ingameInputFieldObj;
 
     public static GameObject playButton;
     public static GameObject settingsButton;
@@ -17,6 +18,7 @@ public class MenuMainScript : MonoBehaviour
     public static GameObject ingameBack;
     public static GameObject ingameNext;
     public static GameObject ingameText;
+    public static GameObject ingameInputField;
 
     private void Start()
     {
@@ -26,6 +28,7 @@ public class MenuMainScript : MonoBehaviour
         ingameBack = ingameBackObj;
         ingameNext = ingameNextObj;
         ingameText = ingameTextObj;
+        ingameInputField = ingameInputFieldObj;
 
         playButton.SetActive(true);
         settingsButton.SetActive(true);
@@ -34,5 +37,6 @@ public class MenuMainScript : MonoBehaviour
         ingameBack.SetActive(false);
         ingameNext.SetActive(false);
         ingameText.SetActive(false);
+        ingameInputField.SetActive(false);
     }
 }
