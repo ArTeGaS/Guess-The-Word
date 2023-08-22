@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Game_texts Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Game_texts
+  m_TableCollectionNameGuidString: 966de1c84f478534699a1955636b7e0d
+  m_Entries:
+  - m_Id: 13256544256
+    m_Key: Pear_w
+    m_Metadata:
+      m_Items: []
+  - m_Id: 198841913344
+    m_Key: Pear_d
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3405169217536
+    m_Key: Fox_w
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410135273472
+    m_Key: Fox_d
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3466942926848
+    m_Key: New Entry 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3471741210624
+    m_Key: New Entry 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3499289399296
+    m_Key: New Entry 4
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3886677086305255449
+  references:
+    version: 2
+    RefIds:
+    - rid: 3886677086305255449
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1691674252769
