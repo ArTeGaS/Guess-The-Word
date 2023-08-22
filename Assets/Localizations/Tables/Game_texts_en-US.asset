@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Game_texts_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 966de1c84f478534699a1955636b7e0d, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 13256544256
+    m_Localized: Pear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 198841913344
+    m_Localized: 'A type of fruit that is typically red or green and has a curved
+      shape, but it''s not what most people would think of first.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3405169217536
+    m_Localized: Fox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3410135273472
+    m_Localized: 'An animal commonly found in domestic households, but also exists
+      in wild populations across the world.
+
+'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
