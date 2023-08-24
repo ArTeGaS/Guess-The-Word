@@ -30,13 +30,13 @@ public class MenuMainScript : MonoBehaviour
         ingameText = ingameTextObj;
         ingameInputField = ingameInputFieldObj;
 
-        playButton.SetActive(true);
-        settingsButton.SetActive(true);
-        exitButton.SetActive(true);
+        //playButton.SetActive(true);
+        //settingsButton.SetActive(true);
+        //exitButton.SetActive(true);
 
-        ingameBack.SetActive(false);
-        ingameNext.SetActive(false);
-        ingameText.SetActive(false);
-        ingameInputField.SetActive(false);
+        //ingameBack.SetActive(false);
+        //ingameNext.SetActive(false);
+        //ingameText.SetActive(false);
+        //ingameInputField.SetActive(false);
     }
 }
