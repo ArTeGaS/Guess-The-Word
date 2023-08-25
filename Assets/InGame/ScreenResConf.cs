@@ -38,6 +38,7 @@ public class ScreenResConf : MonoBehaviour
         switch (gameAspectRatio)
         {
             case 1280f / 720f: //16:9
+            case 1366f / 768f:
                 TextBoxCorrect(600, -0.14f);
                 break;
             case 1280f / 800f: //16:10
