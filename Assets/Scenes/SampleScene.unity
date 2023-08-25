@@ -2806,6 +2806,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtFon: {fileID: 112162813}
   txtBox: {fileID: 1865924846}
-  testFonW: 400
   testFonH: 690
   testPosMod: -0.18
