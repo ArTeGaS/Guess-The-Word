@@ -2738,6 +2738,7 @@ GameObject:
   - component: {fileID: 2145777909}
   - component: {fileID: 2145777911}
   - component: {fileID: 2145777912}
+  - component: {fileID: 2145777913}
   m_Layer: 0
   m_Name: ObjectStorage
   m_TagString: Untagged
@@ -2808,3 +2809,15 @@ MonoBehaviour:
   txtBox: {fileID: 1865924846}
   testFonH: 600
   testPosMod: -0.14
+--- !u!114 &2145777913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145777908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c9b25d354368b4dacc16226ee85813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
