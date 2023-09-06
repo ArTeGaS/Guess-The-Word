@@ -28,6 +28,7 @@ public class MainGameScript : MonoBehaviour
                 Debug.Log(animals["ZebraD"]);
                 break;
         }
+        //JSON_Control.JsonRestruct();
     }
 
     public static void CalculateTotalPages()
