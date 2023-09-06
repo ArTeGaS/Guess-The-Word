@@ -2,13 +2,12 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
-using Unity.VisualScripting;
 
 public class JSON_Control : MonoBehaviour
 {
-    private string localizationPath = "Assets/Localizations/CustomTables/";
+    public static string localizationPath = "Assets/Localizations/CustomTables/";
 
-    public Dictionary<string, string> LoadJsonFile(string fileName)
+    public static Dictionary<string, string> LoadJsonFile(string fileName)
     {
         Dictionary<string, string> data = new Dictionary<string, string>();
 
@@ -27,7 +26,7 @@ public class JSON_Control : MonoBehaviour
         return data;
     }
 
-    public void SaveJsonFile(string fileName, Dictionary<string, string> data)
+    public static void SaveJsonFile(string fileName, Dictionary<string, string> data)
     {
         string jsonText = JsonConvert.SerializeObject(data, Formatting.Indented);
 
