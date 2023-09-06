@@ -11,9 +11,23 @@ public class MainGameScript : MonoBehaviour
     public static TextMeshProUGUI textMeshProS;
     public static int totalPages;
 
+    private Dictionary<string, string> animals;
+
     private void Start()
     {
         textMeshProS = textMeshPro;
+        //Debug.Log(PlayerPrefs.GetString("PlayerLang"));
+        switch (PlayerPrefs.GetString("PlayerLang"))
+        {
+            case "en-US":
+                animals = JSON_Control.LoadJsonFile("Animals_us");
+                Debug.Log(animals["ZebraD"]);
+                break;
+            case "uk-UA":
+                animals = JSON_Control.LoadJsonFile("Animals_ua");
+                Debug.Log(animals["ZebraD"]);
+                break;
+        }
     }
 
     public static void CalculateTotalPages()
