@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using System.Collections;
 
 public class JSON_Control : MonoBehaviour
 {
@@ -34,5 +35,20 @@ public class JSON_Control : MonoBehaviour
         File.WriteAllText(filePath, jsonText);
 
         Debug.Log("File saved: " + filePath);
+    }
+    public static void JsonRestruct(string dictOld, string dictNew)
+    {
+        Dictionary<string, string> dictOldCase = LoadJsonFile(dictOld);
+        Dictionary<string, string> temp = new Dictionary<string, string> { };
+        List<string> tempList = new List<string>();
+        foreach (var pair in dictOldCase)
+        {
+            tempList.Add(pair.Value);
+        }
+        for (int i = 0; i < tempList.Count; i += 2)
+        {
+            temp.Add(tempList[i], tempList[i + 1]);
+        }
+        SaveJsonFile(dictNew, temp);
     }
 }
