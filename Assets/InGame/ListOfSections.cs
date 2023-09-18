@@ -23,6 +23,18 @@ public class ListOfSections : MonoBehaviour
             WordsAndDescriptionriptions.listOfWords.Add(pair.Key);
             WordsAndDescriptionriptions.listOfDiscriptions.Add(pair.Value);
         }
-        Debug.Log(WordsAndDescriptionriptions.listOfDiscriptions[0]);
+        FromListToGame();
+    }
+
+    public static void FromListToGame()
+    {
+        MenuMainScript.listOfAnimals.SetActive(false);
+
+        MenuMainScript.ingameBack.SetActive(true);
+        MenuMainScript.ingameNext.SetActive(true);
+        MenuMainScript.ingameText.SetActive(true);
+        MenuMainScript.ingameInputField.SetActive(true);
+
+        MainGameScript.textMeshProS.text = WordsAndDescriptionriptions.listOfDiscriptions[0];
     }
 }
