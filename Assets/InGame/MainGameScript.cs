@@ -20,12 +20,12 @@ public class MainGameScript : MonoBehaviour
         switch (PlayerPrefs.GetString("PlayerLang"))
         {
             case "en-US":
-                animals = JSON_Control.LoadJsonFile("Animals_us");
-                Debug.Log(animals["ZebraD"]);
+                animals = JSON_Control.LoadJsonFile("Animals_us_upd");
+                //Debug.Log(animals["Zebra"]);
                 break;
             case "uk-UA":
-                animals = JSON_Control.LoadJsonFile("Animals_ua");
-                Debug.Log(animals["ZebraD"]);
+                animals = JSON_Control.LoadJsonFile("Animals_ua_upd");
+                //Debug.Log(animals["Zebra"]);
                 break;
         }
         //JSON_Control.JsonRestruct();
