@@ -11,8 +11,8 @@ public class ScreenResConf : MonoBehaviour
     public GameObject txtFon;
     public TextMeshProUGUI txtBox;
 
-    public int testFonH;
-    public float testPosMod;
+    //public int testFonH;
+    //public float testPosMod;
 
     private RectTransform txtFonRect;
     private RectTransform txtBoxRect;

@@ -11,58 +11,29 @@ public class MainGameScript : MonoBehaviour
     public static TextMeshProUGUI textMeshProS;
     public static int totalPages;
 
-    private Dictionary<string, string> animals;
+    public GameObject ingameBackObj,
+                    ingameNextObj,
+                    ingameTextObj,
+                    ingameInputFieldObj;
+
+    public GameObject listOfAnimalsObj;
+
+    public static GameObject ingameBack,
+                            ingameNext,
+                            ingameText,
+                            ingameInputField;
+
+    public static GameObject listOfAnimals;
 
     private void Start()
     {
         textMeshProS = textMeshPro;
-        //Debug.Log(PlayerPrefs.GetString("PlayerLang"));
-        switch (PlayerPrefs.GetString("PlayerLang"))
-        {
-            case "en-US":
-                animals = JSON_Control.LoadJsonFile("Animals_us_upd");
-                //Debug.Log(animals["Zebra"]);
-                break;
-            case "uk-UA":
-                animals = JSON_Control.LoadJsonFile("Animals_ua_upd");
-                //Debug.Log(animals["Zebra"]);
-                break;
-        }
-        //JSON_Control.JsonRestruct();
-    }
 
-    public static void CalculateTotalPages()
-    {
-        totalPages = textMeshProS.textInfo.pageCount;
-    }
+        ingameBack = ingameBackObj;
+        ingameNext = ingameNextObj;
+        ingameText = ingameTextObj;
+        ingameInputField = ingameInputFieldObj;
 
-    public static void NextPage()
-    {
-        CalculateTotalPages();
-        if (currentPage <= totalPages)
-        {
-            currentPage = totalPages;
-            textMeshProS.pageToDisplay = currentPage;
-        }
-        else
-        {
-            currentPage++;
-            textMeshProS.pageToDisplay = currentPage;
-        }
-    }
-
-    public static void PreviousPage()
-    {
-        CalculateTotalPages();
-        switch (currentPage){
-            case <= 1:
-                currentPage = 1;
-                textMeshProS.pageToDisplay = currentPage;
-                break;
-            case > 1:
-                currentPage--;
-                textMeshProS.pageToDisplay = currentPage;
-                break;
-        }
+        listOfAnimals = listOfAnimalsObj;
     }
 }
