@@ -10,6 +10,6 @@ public class Play : MonoBehaviour
         MenuMainScript.settingsButton.SetActive(false);
         MenuMainScript.exitButton.SetActive(false);
 
-        MenuMainScript.listOfAnimals.SetActive(true);
+        MainGameScript.listOfAnimals.SetActive(true);
     }
 }

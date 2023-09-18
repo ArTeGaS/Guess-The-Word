@@ -6,10 +6,10 @@ public class InGameControl : MonoBehaviour
 {
     public void NextPage()
     {
-        MainGameScript.NextPage();
+        GameFuncs.NextPage();
     }
     public void PreviousPage()
     {
-        MainGameScript.PreviousPage();
+        GameFuncs.PreviousPage();
     }
 }
