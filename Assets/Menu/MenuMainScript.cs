@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class MenuMainScript : MonoBehaviour
 {
-    public GameObject playButtonObj;
-    public GameObject settingsButtonObj;
-    public GameObject exitButtonObj;
-    public GameObject ingameBackObj;
-    public GameObject ingameNextObj;
-    public GameObject ingameTextObj;
-    public GameObject ingameInputFieldObj;
+    public GameObject playButtonObj,
+                    settingsButtonObj,
+                    exitButtonObj,
+                    ingameBackObj,
+                    ingameNextObj,
+                    ingameTextObj,
+                    ingameInputFieldObj;
 
-    public static GameObject playButton;
-    public static GameObject settingsButton;
-    public static GameObject exitButton;
-    public static GameObject ingameBack;
-    public static GameObject ingameNext;
-    public static GameObject ingameText;
-    public static GameObject ingameInputField;
+    public GameObject listOfAnimalsObj;
+
+    public static GameObject playButton,
+                            settingsButton,
+                            exitButton,
+                            ingameBack,
+                            ingameNext,
+                            ingameText,
+                            ingameInputField;
+
+    public static GameObject listOfAnimals;
 
     private void Start()
     {
@@ -30,13 +34,10 @@ public class MenuMainScript : MonoBehaviour
         ingameText = ingameTextObj;
         ingameInputField = ingameInputFieldObj;
 
-        //playButton.SetActive(true);
-        //settingsButton.SetActive(true);
-        //exitButton.SetActive(true);
+        listOfAnimals = listOfAnimalsObj;
 
-        //ingameBack.SetActive(false);
-        //ingameNext.SetActive(false);
-        //ingameText.SetActive(false);
-        //ingameInputField.SetActive(false);
+        playButton.SetActive(true);
+        settingsButton.SetActive(true);
+        exitButton.SetActive(true);
     }
 }
