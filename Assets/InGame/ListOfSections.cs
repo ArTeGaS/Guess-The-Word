@@ -10,13 +10,18 @@ public class ListOfSections : MonoBehaviour
         {
             WordsAndDescriptionriptions.listOfWords = new List<string>();
             WordsAndDescriptionriptions.listOfDiscriptions = new List<string>();
+
+            WordsAndDescriptionriptions.listOfWordsParallel = new List<string>();
+            WordsAndDescriptionriptions.listOfDiscriptionsParallel = new List<string>();
             switch (PlayerPrefs.GetString("PlayerLang"))
             {
                 case "en-US":
                     WordsAndDescriptionriptions.tempDict = JSON_Control.LoadJsonFile(nameOfSection + "_us_upd");
+                    WordsAndDescriptionriptions.tempDictParallel = JSON_Control.LoadJsonFile(nameOfSection + "_ua_upd");
                     break;
                 case "uk-UA":
                     WordsAndDescriptionriptions.tempDict = JSON_Control.LoadJsonFile(nameOfSection + "_ua_upd");
+                    WordsAndDescriptionriptions.tempDictParallel = JSON_Control.LoadJsonFile(nameOfSection + "_us_upd");
                     break;
             }
 
@@ -24,6 +29,11 @@ public class ListOfSections : MonoBehaviour
             {
                 WordsAndDescriptionriptions.listOfWords.Add(pair.Key);
                 WordsAndDescriptionriptions.listOfDiscriptions.Add(pair.Value);
+            }
+            foreach (var pair in WordsAndDescriptionriptions.tempDictParallel)
+            {
+                WordsAndDescriptionriptions.listOfWordsParallel.Add(pair.Key);
+                WordsAndDescriptionriptions.listOfDiscriptionsParallel.Add(pair.Value);
             }
         }
         PlayerPrefs.SetInt("animalsListFirstRunFlag", 0); //need set 1
@@ -39,6 +49,15 @@ public class ListOfSections : MonoBehaviour
         MainGameScript.ingameText.SetActive(true);
         MainGameScript.ingameInputField.SetActive(true);
 
-        MainGameScript.textMeshProS.text = WordsAndDescriptionriptions.listOfDiscriptions[MainGameScript.wordsCounter];
+        UpdateWordDescription();
+    }
+    public static void UpdateWordDescription()
+    {
+        MainGameScript.textMeshProS.text = WordsAndDescriptionriptions.listOfDiscriptions[WordsAndDescriptionriptions.currentWord];
+    }
+    public static int CalculateAllWords()
+    {
+        WordsAndDescriptionriptions.wordsCount = WordsAndDescriptionriptions.listOfWords.Count;
+        return WordsAndDescriptionriptions.listOfWords.Count;
     }
 }

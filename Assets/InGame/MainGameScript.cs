@@ -11,11 +11,6 @@ public class MainGameScript : MonoBehaviour
     public static TextMeshProUGUI textMeshProS;
     public static int totalPages;
 
-    public static int currentWord = 0;
-    public static int wordsCount;
-
-    public static int wordsCounter = 0;
-
     public GameObject ingameBackObj,
                     ingameNextObj,
                     ingameTextObj,
