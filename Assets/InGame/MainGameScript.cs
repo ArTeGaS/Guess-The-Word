@@ -11,6 +11,11 @@ public class MainGameScript : MonoBehaviour
     public static TextMeshProUGUI textMeshProS;
     public static int totalPages;
 
+    public static int currentWord = 0;
+    public static int wordsCount;
+
+    public static int wordsCounter = 0;
+
     public GameObject ingameBackObj,
                     ingameNextObj,
                     ingameTextObj,
@@ -25,6 +30,9 @@ public class MainGameScript : MonoBehaviour
 
     public static GameObject listOfAnimals;
 
+    public TMP_InputField inputFieldTextObj;
+    public static TMP_InputField inputFieldText;
+
     private void Start()
     {
         textMeshProS = textMeshPro;
@@ -33,6 +41,8 @@ public class MainGameScript : MonoBehaviour
         ingameNext = ingameNextObj;
         ingameText = ingameTextObj;
         ingameInputField = ingameInputFieldObj;
+
+        inputFieldText = inputFieldTextObj;
 
         listOfAnimals = listOfAnimalsObj;
     }

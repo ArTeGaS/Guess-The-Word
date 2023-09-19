@@ -39,6 +39,6 @@ public class ListOfSections : MonoBehaviour
         MainGameScript.ingameText.SetActive(true);
         MainGameScript.ingameInputField.SetActive(true);
 
-        MainGameScript.textMeshProS.text = WordsAndDescriptionriptions.listOfDiscriptions[0];
+        MainGameScript.textMeshProS.text = WordsAndDescriptionriptions.listOfDiscriptions[MainGameScript.wordsCounter];
     }
 }
