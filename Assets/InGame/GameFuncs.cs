@@ -4,50 +4,37 @@ using UnityEngine;
 
 public class GameFuncs : MonoBehaviour
 {
-    public static void CalculateTotalPages()
-    {
-        MainGameScript.totalPages = MainGameScript.textMeshProS.textInfo.pageCount;
-    }
-
-    public static void NextPage()
-    {
-        CalculateTotalPages();
-        if (MainGameScript.currentPage <= MainGameScript.totalPages)
-        {
-            MainGameScript.currentPage = MainGameScript.totalPages;
-            MainGameScript.textMeshProS.pageToDisplay = MainGameScript.currentPage;
-        }
-        else
-        {
-            MainGameScript.currentPage++;
-            MainGameScript.textMeshProS.pageToDisplay = MainGameScript.currentPage;
-        }
-    }
-
-    public static void PreviousPage()
-    {
-        CalculateTotalPages();
-        switch (MainGameScript.currentPage)
-        {
-            case <= 1:
-                MainGameScript.currentPage = 1;
-                MainGameScript.textMeshProS.pageToDisplay = MainGameScript.currentPage;
-                break;
-            case > 1:
-                MainGameScript.currentPage--;
-                MainGameScript.textMeshProS.pageToDisplay = MainGameScript.currentPage;
-                break;
-        }
-    }
     public void OnEnterPress()
     {
-        if (MainGameScript.inputFieldText.text == WordsAndDescriptionriptions.listOfWords[MainGameScript.wordsCounter])
+        if (MainGameScript.inputFieldText.text == WordsAndDescriptionriptions.listOfWords[WordsAndDescriptionriptions.currentWord])
         {
             Debug.Log(MainGameScript.inputFieldText.text);
         }
     }
-    public void CalculateAllWords()
+    public void NextWordButton()
     {
-        MainGameScript.wordsCount = WordsAndDescriptionriptions.listOfWords.Count;
+        switch (WordsAndDescriptionriptions.currentWord)
+        {
+            case int n when n < ListOfSections.CalculateAllWords() - 1:
+                WordsAndDescriptionriptions.currentWord++;
+                break;
+            case int n when n <= ListOfSections.CalculateAllWords() -1:
+                WordsAndDescriptionriptions.currentWord = 0;
+                break;
+        }
+        ListOfSections.UpdateWordDescription();
+    }
+    public void BackWordButton()
+    {
+        switch (WordsAndDescriptionriptions.currentWord)
+        {
+            case > 0:
+                WordsAndDescriptionriptions.currentWord--;
+                break;
+            case <= 0:
+                WordsAndDescriptionriptions.currentWord = ListOfSections.CalculateAllWords() -1;
+                break;
+        }
+        ListOfSections.UpdateWordDescription();
     }
 }
