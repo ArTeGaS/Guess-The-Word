@@ -39,4 +39,15 @@ public class GameFuncs : MonoBehaviour
                 break;
         }
     }
+    public void OnEnterPress()
+    {
+        if (MainGameScript.inputFieldText.text == WordsAndDescriptionriptions.listOfWords[MainGameScript.wordsCounter])
+        {
+            Debug.Log(MainGameScript.inputFieldText.text);
+        }
+    }
+    public void CalculateAllWords()
+    {
+        MainGameScript.wordsCount = WordsAndDescriptionriptions.listOfWords.Count;
+    }
 }
