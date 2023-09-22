@@ -6,9 +6,9 @@ using System.Collections;
 
 public class JSON_Control : MonoBehaviour
 {
-    public static string localizationPath = "Assets/Localizations/CustomTables/Upd";
-    public static string localOldPath = "Assets/Localizations/CustomTables/Old";
-    public static string localTempPath = "Assets/Localizations/CustomTables/Temp";
+    public static string localizationPath = "Assets/inGame/CustomTables/Upd";
+    public static string localOldPath = "Assets/inGame/CustomTables/Old";
+    public static string localTempPath = "Assets/inGame/CustomTables/Temp";
 
     public static Dictionary<string, string> LoadJsonFile(string fileName, string locPath="Assets/Localizations/CustomTables/Upd")
     {
