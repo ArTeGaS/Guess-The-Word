@@ -37,4 +37,18 @@ public class GameFuncs : MonoBehaviour
         }
         ListOfSections.UpdateWordDescription();
     }
+    public void BackToSections()
+    {
+        ListOfSections.FromGameToList();
+        MainGameScript.listOfAnimals.SetActive(true);
+
+        MainGameScript.fromListToMenu.SetActive(true);
+
+        MainGameScript.ingameBack.SetActive(false);
+        MainGameScript.ingameNext.SetActive(false);
+        MainGameScript.ingameHints.SetActive(false);
+        MainGameScript.ingameSection.SetActive(false);
+        MainGameScript.ingameText.SetActive(false);
+        MainGameScript.ingameInputField.SetActive(false);
+    }
 }

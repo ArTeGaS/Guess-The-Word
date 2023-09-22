@@ -12,6 +12,10 @@ public class WordsAndDescriptionriptions : MonoBehaviour
     public static List<string> listOfWordsParallel;
     public static List<string> listOfDiscriptionsParallel;
 
+    public static string currentLoadedListName;
+    public static string parallelLoadedListName;
+    public static string targetLang;
+    public static string anotherLang;
     public static int currentWord = 0;
     public static int wordsCount;
 
