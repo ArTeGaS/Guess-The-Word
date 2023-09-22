@@ -2,15 +2,14 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
-using System.Collections;
 
 public class JSON_Control : MonoBehaviour
 {
-    public static string localizationPath = "Assets/inGame/CustomTables/Upd";
-    public static string localOldPath = "Assets/inGame/CustomTables/Old";
-    public static string localTempPath = "Assets/inGame/CustomTables/Temp";
+    public static string localizationPath = "Assets/InGame/CustomTables/Upd";
+    public static string localOldPath = "Assets/InGame/CustomTables/Old";
+    public static string localTempPath = "Assets/InGame/CustomTables/Temp";
 
-    public static Dictionary<string, string> LoadJsonFile(string fileName, string locPath="Assets/Localizations/CustomTables/Upd")
+    public static Dictionary<string, string> LoadJsonFile(string fileName, string locPath= "Assets/InGame/CustomTables/Upd")
     {
         Dictionary<string, string> data = new Dictionary<string, string>();
 
@@ -29,7 +28,7 @@ public class JSON_Control : MonoBehaviour
         return data;
     }
 
-    public static void SaveJsonFile(string fileName, Dictionary<string, string> data, string locPath="Assets/Localizations/CustomTables/Upd")
+    public static void SaveJsonFile(string fileName, Dictionary<string, string> data, string locPath= "Assets/InGame/CustomTables/Upd")
     {
         string jsonText = JsonConvert.SerializeObject(data, Formatting.Indented);
 

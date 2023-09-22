@@ -18,26 +18,12 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 13256544256
-    m_Localized: Pear
+  - m_Id: 15653009382363136
+    m_Localized: Play
     m_Metadata:
       m_Items: []
-  - m_Id: 198841913344
-    m_Localized: 'A type of fruit that is typically red or green and has a curved
-      shape, but it''s not what most people would think of first.
-
-'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3405169217536
-    m_Localized: Fox
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3410135273472
-    m_Localized: 'An animal commonly found in domestic households, but also exists
-      in wild populations across the world.
-
-'
+  - m_Id: 15653181512404992
+    m_Localized: Settings
     m_Metadata:
       m_Items: []
   references:
