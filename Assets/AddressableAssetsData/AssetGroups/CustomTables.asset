@@ -12,11 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: CustomTables
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: CustomTables
   m_Data:
     m_SerializedData: []
   m_GUID: 78a279b05bed09c47ab11dfccb32c6af
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 3712d057989bbe649a4fa9595e950ccd
+    m_Address: Animals_ua_upd
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ae932c731d3935f44a3e41c8e48624ea
+    m_Address: Animals_us_upd
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5446d445f0c66764992b032567b51069, type: 2}
   m_SchemaSet:

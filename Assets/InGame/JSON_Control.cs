@@ -11,13 +11,13 @@ public class JSON_Control : MonoBehaviour
     public static string localOldPath = "Assets/InGame/CustomTables/Old";
     public static string localTempPath = "Assets/InGame/CustomTables/Temp";
 
-    public static GameObject _cachedObject;
+    public static TextAsset _cachedObject;
 
     public static Dictionary<string, string> LoadJsonFile(string fileName, string locPath= "Assets/InGame/CustomTables/Upd")
     {
         Dictionary<string, string> data = new Dictionary<string, string>();
 
-        string filePath = Path.Combine(locPath, fileName + ".json");
+        string filePath = Path.Combine(Application.persistentDataPath, fileName + ".json");
 
         if (File.Exists(filePath))
         {
@@ -35,10 +35,17 @@ public class JSON_Control : MonoBehaviour
     {
         Dictionary<string, string> data = new Dictionary<string, string>();
 
-        var handle = Addressables.InstantiateAsync(assetId);
-        _cachedObject = await handle.Task;
+        //string folderPath = Path.Combine(Application.persistentDataPath, "/Saves/Tables");
+        //Directory.CreateDirectory(folderPath);
 
-        string component = _cachedObject.GetComponent<string>();
+        var handle = Addressables.LoadAssetAsync<TextAsset>(assetId);
+        _cachedObject = await handle.Task;
+        if (_cachedObject == null)
+        {
+            Debug.LogError("Failed to load the object from Addressables.");
+            return null; // Або виконайте іншу логіку обробки помилки
+        }
+        string component = _cachedObject.text;
 
         data = JsonConvert.DeserializeObject<Dictionary<string, string>>(component);
 
@@ -50,6 +57,16 @@ public class JSON_Control : MonoBehaviour
         string jsonText = JsonConvert.SerializeObject(data, Formatting.Indented);
 
         string filePath = Path.Combine(locPath, fileName + ".json");
+        File.WriteAllText(filePath, jsonText);
+
+        Debug.Log("File saved: " + filePath);
+    }
+
+    public static void SaveJsonFileNew(string fileName, Dictionary<string, string> data, string locPath)
+    {
+        string jsonText = JsonConvert.SerializeObject(data, Formatting.Indented);
+
+        string filePath = Path.Combine(Application.persistentDataPath, fileName + ".json");
         File.WriteAllText(filePath, jsonText);
 
         Debug.Log("File saved: " + filePath);
@@ -69,21 +86,5 @@ public class JSON_Control : MonoBehaviour
         }
         SaveJsonFile(dictNew, temp);
     }
-    public static async Task<T> LoadMyTable<T>(string assetId)
-    {
-        var handle = Addressables.InstantiateAsync(assetId);
-        _cachedObject = await handle.Task;
 
-        T component = _cachedObject.GetComponent<T>();
-
-        return component;
-    }
-    public static void UnloadMyTable()
-    {
-        if (_cachedObject == null)
-            return;
-        _cachedObject.SetActive(false);
-        Addressables.ReleaseInstance(_cachedObject);
-        _cachedObject = null;
-    }
 }
