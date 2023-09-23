@@ -16,23 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: ca6db350bb824a64f85a7e3d8be69544
-  m_SerializeEntries:
-  - m_GUID: 3712d057989bbe649a4fa9595e950ccd
-    m_Address: Assets/InGame/CustomTables/Upd/Animals_ua_upd.json
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: ae932c731d3935f44a3e41c8e48624ea
-    m_Address: Assets/InGame/CustomTables/Upd/Animals_us_upd.json
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 131d5a01ecc246a4faf0a9949d3f41bc
-    m_Address: Assets/InGame/CustomTables/Temp/Animals_us_upd.json
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b9f008325d3c5104ba9e6fc06d32aad6
-    m_Address: Assets/InGame/CustomTables/Temp/Animals_ua_upd.json
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5446d445f0c66764992b032567b51069, type: 2}
   m_SchemaSet:

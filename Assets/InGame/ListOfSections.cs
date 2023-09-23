@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ListOfSections : MonoBehaviour
 {
-    public static void ListOf(string nameOfSection)
+    public static async void ListOf(string nameOfSection)
     {
         WordsAndDescriptionriptions.listOfWords = new List<string>();
         WordsAndDescriptionriptions.listOfDiscriptions = new List<string>();
@@ -30,9 +30,10 @@ public class ListOfSections : MonoBehaviour
             case 0:
                 {
                     WordsAndDescriptionriptions.tempDict =
-                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
+                        await JSON_Control.LoadJsonFileNew(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
                     WordsAndDescriptionriptions.tempDictParallel =
-                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.anotherLang + "_upd");
+                        await JSON_Control.LoadJsonFileNew(nameOfSection + WordsAndDescriptionriptions.anotherLang + "_upd");
+                    Debug.Log(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
                     PlayerPrefs.SetInt("animalsListFirstRunFlag", 1);
                     Debug.Log("Створено новий список");
                     break;
@@ -40,11 +41,9 @@ public class ListOfSections : MonoBehaviour
             case 1:
                 {
                     WordsAndDescriptionriptions.tempDict =
-                        JSON_Control.LoadJsonFile(nameOfSection +
-                        WordsAndDescriptionriptions.targetLang,JSON_Control.localTempPath + "_temp");
+                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang + "_temp");
                     WordsAndDescriptionriptions.tempDictParallel =
-                        JSON_Control.LoadJsonFile(nameOfSection +
-                        WordsAndDescriptionriptions.anotherLang, JSON_Control.localTempPath + "_temp");
+                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.anotherLang + "_temp");
                     Debug.Log("Відкрито існуючий список");
                     break;
                 }
@@ -102,10 +101,10 @@ public class ListOfSections : MonoBehaviour
             WordsAndDescriptionriptions.tempDictParallel.Add(WordsAndDescriptionriptions.listOfWordsParallel[i],
                                                                 WordsAndDescriptionriptions.listOfDiscriptionsParallel[i]);
         }
-        JSON_Control.SaveJsonFile(WordsAndDescriptionriptions.currentLoadedListName,
+        JSON_Control.SaveJsonFileNew(WordsAndDescriptionriptions.currentLoadedListName,
                                     WordsAndDescriptionriptions.tempDict,
                                     JSON_Control.localTempPath);
-        JSON_Control.SaveJsonFile(WordsAndDescriptionriptions.parallelLoadedListName,
+        JSON_Control.SaveJsonFileNew(WordsAndDescriptionriptions.parallelLoadedListName,
                                     WordsAndDescriptionriptions.tempDictParallel,
                                     JSON_Control.localTempPath);
     }

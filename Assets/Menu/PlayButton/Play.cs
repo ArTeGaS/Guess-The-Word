@@ -13,7 +13,6 @@ public class Play : MonoBehaviour
         MainGameScript.listOfAnimals.SetActive(true);
 
         MainGameScript.fromListToMenu.SetActive(true);
-        Debug.Log(PlayerPrefs.GetString("PlayerLang"));
-        Debug.Log(PlayerPrefs.HasKey("PlayerLang"));
+        Debug.Log(Application.persistentDataPath);
     }
 }
