@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class ListOfSections : MonoBehaviour
@@ -14,12 +15,12 @@ public class ListOfSections : MonoBehaviour
         switch (PlayerPrefs.GetString("PlayerLang"))
         {
             case "en-US":
-                WordsAndDescriptionriptions.targetLang = "_us_upd";
-                WordsAndDescriptionriptions.anotherLang = "_ua_upd";
+                WordsAndDescriptionriptions.targetLang = "_us";
+                WordsAndDescriptionriptions.anotherLang = "_ua";
                 break;
             case "uk-UA":
-                WordsAndDescriptionriptions.targetLang = "_ua_upd";
-                WordsAndDescriptionriptions.anotherLang = "_us_upd";
+                WordsAndDescriptionriptions.targetLang = "_ua";
+                WordsAndDescriptionriptions.anotherLang = "_us";
                 Debug.Log("Відкрита Українська локлізація");
                 break;
         }
@@ -28,8 +29,10 @@ public class ListOfSections : MonoBehaviour
         {
             case 0:
                 {
-                    WordsAndDescriptionriptions.tempDict = JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang);
-                    WordsAndDescriptionriptions.tempDictParallel = JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.anotherLang);
+                    WordsAndDescriptionriptions.tempDict =
+                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
+                    WordsAndDescriptionriptions.tempDictParallel =
+                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.anotherLang + "_upd");
                     PlayerPrefs.SetInt("animalsListFirstRunFlag", 1);
                     Debug.Log("Створено новий список");
                     break;
@@ -37,16 +40,18 @@ public class ListOfSections : MonoBehaviour
             case 1:
                 {
                     WordsAndDescriptionriptions.tempDict =
-                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang, JSON_Control.localTempPath);
+                        JSON_Control.LoadJsonFile(nameOfSection +
+                        WordsAndDescriptionriptions.targetLang,JSON_Control.localTempPath + "_temp");
                     WordsAndDescriptionriptions.tempDictParallel =
-                        JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.anotherLang, JSON_Control.localTempPath);
+                        JSON_Control.LoadJsonFile(nameOfSection +
+                        WordsAndDescriptionriptions.anotherLang, JSON_Control.localTempPath + "_temp");
                     Debug.Log("Відкрито існуючий список");
                     break;
                 }
         }
 
-        WordsAndDescriptionriptions.currentLoadedListName = nameOfSection + WordsAndDescriptionriptions.targetLang;
-        WordsAndDescriptionriptions.parallelLoadedListName = nameOfSection + WordsAndDescriptionriptions.anotherLang;
+        WordsAndDescriptionriptions.currentLoadedListName = nameOfSection + WordsAndDescriptionriptions.targetLang + "_temp";
+        WordsAndDescriptionriptions.parallelLoadedListName = nameOfSection + WordsAndDescriptionriptions.anotherLang + "_temp";
 
         foreach (var pair in WordsAndDescriptionriptions.tempDict)
         {

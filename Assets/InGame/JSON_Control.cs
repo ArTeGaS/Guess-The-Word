@@ -2,12 +2,16 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using UnityEngine.AddressableAssets;
+using System.Threading.Tasks;
 
 public class JSON_Control : MonoBehaviour
 {
     public static string localizationPath = "Assets/InGame/CustomTables/Upd";
     public static string localOldPath = "Assets/InGame/CustomTables/Old";
     public static string localTempPath = "Assets/InGame/CustomTables/Temp";
+
+    public static GameObject _cachedObject;
 
     public static Dictionary<string, string> LoadJsonFile(string fileName, string locPath= "Assets/InGame/CustomTables/Upd")
     {
@@ -24,6 +28,19 @@ public class JSON_Control : MonoBehaviour
         {
             Debug.LogError("File not found: " + filePath);
         }
+
+        return data;
+    }
+    public static async Task<Dictionary<string, string>> LoadJsonFileNew(string assetId)
+    {
+        Dictionary<string, string> data = new Dictionary<string, string>();
+
+        var handle = Addressables.InstantiateAsync(assetId);
+        _cachedObject = await handle.Task;
+
+        string component = _cachedObject.GetComponent<string>();
+
+        data = JsonConvert.DeserializeObject<Dictionary<string, string>>(component);
 
         return data;
     }
@@ -51,5 +68,22 @@ public class JSON_Control : MonoBehaviour
             temp.Add(tempList[i], tempList[i + 1]);
         }
         SaveJsonFile(dictNew, temp);
+    }
+    public static async Task<T> LoadMyTable<T>(string assetId)
+    {
+        var handle = Addressables.InstantiateAsync(assetId);
+        _cachedObject = await handle.Task;
+
+        T component = _cachedObject.GetComponent<T>();
+
+        return component;
+    }
+    public static void UnloadMyTable()
+    {
+        if (_cachedObject == null)
+            return;
+        _cachedObject.SetActive(false);
+        Addressables.ReleaseInstance(_cachedObject);
+        _cachedObject = null;
     }
 }
