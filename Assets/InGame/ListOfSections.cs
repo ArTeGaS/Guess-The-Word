@@ -12,6 +12,7 @@ public class ListOfSections : MonoBehaviour
 
         WordsAndDescriptionriptions.listOfWordsParallel = new List<string>();
         WordsAndDescriptionriptions.listOfDiscriptionsParallel = new List<string>();
+
         switch (PlayerPrefs.GetString("PlayerLang"))
         {
             case "en-US":
@@ -89,7 +90,7 @@ public class ListOfSections : MonoBehaviour
 
         UpdateWordDescription();
     }
-    public static void FromGameToList()
+    public static void SaveProgress()
     {
         WordsAndDescriptionriptions.tempDict = new Dictionary<string, string>();
         WordsAndDescriptionriptions.tempDictParallel = new Dictionary<string, string>();
@@ -107,6 +108,10 @@ public class ListOfSections : MonoBehaviour
         JSON_Control.SaveJsonFileNew(WordsAndDescriptionriptions.parallelLoadedListName,
                                     WordsAndDescriptionriptions.tempDictParallel,
                                     JSON_Control.localTempPath);
+    }
+    public static void HideWordDescriprion()
+    {
+        MainGameScript.textMeshProS.text = " ";
     }
     public static void UpdateWordDescription()
     {

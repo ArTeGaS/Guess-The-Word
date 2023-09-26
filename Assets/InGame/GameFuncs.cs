@@ -8,8 +8,32 @@ public class GameFuncs : MonoBehaviour
     {
         if (MainGameScript.inputFieldText.text == WordsAndDescriptionriptions.listOfWords[WordsAndDescriptionriptions.currentWord])
         {
-            Debug.Log(MainGameScript.inputFieldText.text);
+            StartCoroutine(CongratsEvent());
         }
+    }
+    public IEnumerator CongratsEvent()
+    {
+        MainGameScript.inGameCanvasGroup.blocksRaycasts = false;
+        ListOfSections.HideWordDescriprion();
+        MainGameScript.congratsText.SetActive(true);
+        WordsAndDescriptionriptions.listOfWords.RemoveAt(WordsAndDescriptionriptions.currentWord);
+        WordsAndDescriptionriptions.listOfWordsParallel.RemoveAt(WordsAndDescriptionriptions.currentWord);
+        WordsAndDescriptionriptions.listOfDiscriptions.RemoveAt(WordsAndDescriptionriptions.currentWord);
+        WordsAndDescriptionriptions.listOfDiscriptionsParallel.RemoveAt(WordsAndDescriptionriptions.currentWord);
+        ListOfSections.SaveProgress();
+        yield return new WaitForSeconds(2f);
+        switch (ListOfSections.CalculateAllWords())
+        {
+            case > 0:
+                MainGameScript.congratsText.SetActive(false);
+                ListOfSections.UpdateWordDescription();
+                MainGameScript.inGameCanvasGroup.blocksRaycasts = true;
+                break;
+            case 0:
+                BackToSections();
+                break;
+        }
+        
     }
     public void NextWordButton()
     {
@@ -39,7 +63,6 @@ public class GameFuncs : MonoBehaviour
     }
     public void BackToSections()
     {
-        ListOfSections.FromGameToList();
         MainGameScript.listOfAnimals.SetActive(true);
 
         MainGameScript.fromListToMenu.SetActive(true);
