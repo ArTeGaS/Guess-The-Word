@@ -14,17 +14,18 @@ public class WordsAndDescriptionriptions : MonoBehaviour
 
     public static string currentLoadedListName;
     public static string parallelLoadedListName;
+
     public static string targetLang;
     public static string anotherLang;
+
     public static int currentWord = 0;
     public static int wordsCount;
 
-    public static int animalsListFirstRunFlag = 0;
     private void Start()
     {
-        if (PlayerPrefs.HasKey("animalsListFirstRunFlag"))
+        if (!PlayerPrefs.HasKey("animalsListFirstRunFlag"))
         {
-            animalsListFirstRunFlag = PlayerPrefs.GetInt("animalsListFirstRunFlag");
+            PlayerPrefs.SetInt("animalsListFirstRunFlag", 0);
         }
     }
 }

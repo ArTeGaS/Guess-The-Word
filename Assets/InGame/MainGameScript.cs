@@ -18,14 +18,19 @@ public class MainGameScript : MonoBehaviour
                         ingameHintsObj,
                         ingameSectionObj,
                         ingameTextObj,
-                        ingameInputFieldObj;
-    
+                        ingameInputFieldObj,
+                        congratsTextObj;
+
     public static GameObject ingameBack,
                                 ingameNext,
                                 ingameHints,
                                 ingameSection,
                                 ingameText,
-                                ingameInputField;
+                                ingameInputField,
+                                congratsText;
+
+    public CanvasGroup inGameCanvasGroupObj;
+    public static CanvasGroup inGameCanvasGroup;
 
     // Lists of Categoty
     public GameObject listOfAnimalsObj;
@@ -41,6 +46,7 @@ public class MainGameScript : MonoBehaviour
     //Canvas pos correctors
     public RectTransform myCanvas;
     public RectTransform settingsFolder;
+    public RectTransform inGameButtonsAndOther;
 
     private void Start()
     {
@@ -54,6 +60,9 @@ public class MainGameScript : MonoBehaviour
         ingameSection = ingameSectionObj;
         ingameText = ingameTextObj;
         ingameInputField = ingameInputFieldObj;
+        congratsText = congratsTextObj;
+
+        inGameCanvasGroup = inGameCanvasGroupObj;
 
         // TMP objects
         inputFieldText = inputFieldTextObj;
@@ -65,5 +74,6 @@ public class MainGameScript : MonoBehaviour
 
         // Canvas pos correctors
         settingsFolder.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
+        inGameButtonsAndOther.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
     }
 }
