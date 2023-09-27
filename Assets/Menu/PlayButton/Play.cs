@@ -10,9 +10,12 @@ public class Play : MonoBehaviour
         MenuMainScript.settingsButton.SetActive(false);
         MenuMainScript.exitButton.SetActive(false);
 
-        MainGameScript.listOfAnimals.SetActive(true);
+        ListOfSections.ListsUpdate();
 
         MainGameScript.fromListToMenu.SetActive(true);
+        MainGameScript.listsUp.SetActive(true);
+        MainGameScript.listsDown.SetActive(true);
+
         Debug.Log(Application.persistentDataPath);
     }
 }

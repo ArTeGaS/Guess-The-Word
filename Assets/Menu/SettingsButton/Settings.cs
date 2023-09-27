@@ -15,7 +15,10 @@ public class Settings : MonoBehaviour
     }
     public void ResetGameProgressButton()
     {
-        PlayerPrefs.SetInt("animalsListFirstRunFlag", 0);
+        foreach( var tempList in WordsAndDescriptionriptions.listsFlags )
+        {
+            PlayerPrefs.SetInt(tempList, 0);
+        }
     }
     public void BackToMenu()
     {
