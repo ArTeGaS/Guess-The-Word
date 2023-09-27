@@ -13,6 +13,8 @@ public class ListOfSections : MonoBehaviour
         WordsAndDescriptionriptions.listOfWordsParallel = new List<string>();
         WordsAndDescriptionriptions.listOfDiscriptionsParallel = new List<string>();
 
+        string playerPrefsId = nameOfSection + "ListFirstRunFlag";
+
         switch (PlayerPrefs.GetString("PlayerLang"))
         {
             case "en-US":
@@ -26,7 +28,7 @@ public class ListOfSections : MonoBehaviour
                 break;
         }
 
-        switch (PlayerPrefs.GetInt("animalsListFirstRunFlag"))
+        switch (PlayerPrefs.GetInt(playerPrefsId))
         {
             case 0:
                 {
@@ -35,7 +37,7 @@ public class ListOfSections : MonoBehaviour
                     WordsAndDescriptionriptions.tempDictParallel =
                         await JSON_Control.LoadJsonFileNew(nameOfSection + WordsAndDescriptionriptions.anotherLang + "_upd");
                     Debug.Log(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
-                    PlayerPrefs.SetInt("animalsListFirstRunFlag", 1);
+                    PlayerPrefs.SetInt(playerPrefsId, 1);
                     Debug.Log("Створено новий список");
                     break;
                 }
@@ -67,9 +69,14 @@ public class ListOfSections : MonoBehaviour
     }
     public static void FromListToMenu()
     {
-        MainGameScript.listOfAnimals.SetActive(false);
-
         MainGameScript.fromListToMenu.SetActive(false);
+        MainGameScript.listsUp.SetActive(false);
+        MainGameScript.listsDown.SetActive(false);
+
+        foreach( var tempList in WordsAndDescriptionriptions.listOfCategories)
+        {
+            tempList.SetActive(false);
+        }
 
         MenuMainScript.playButton.SetActive(true);
         MenuMainScript.settingsButton.SetActive(true);
@@ -77,9 +84,14 @@ public class ListOfSections : MonoBehaviour
     }
     public static void FromListToGame()
     {
-        MainGameScript.listOfAnimals.SetActive(false);
-
         MainGameScript.fromListToMenu.SetActive(false);
+        MainGameScript.listsUp.SetActive(false);
+        MainGameScript.listsDown.SetActive(false);
+
+        foreach (var tempList in WordsAndDescriptionriptions.listOfCategories)
+        {
+            tempList.SetActive(false);
+        }
 
         MainGameScript.ingameBack.SetActive(true);
         MainGameScript.ingameNext.SetActive(true);
@@ -121,5 +133,36 @@ public class ListOfSections : MonoBehaviour
     {
         WordsAndDescriptionriptions.wordsCount = WordsAndDescriptionriptions.listOfWords.Count;
         return WordsAndDescriptionriptions.listOfWords.Count;
+    }
+
+    public static void ListsUpdate()
+    {
+        List<GameObject> listLink = WordsAndDescriptionriptions.listOfCategories;
+        listLink[0].transform.position = MainGameScript.posE_1.transform.position;
+        listLink[1].transform.position = MainGameScript.posE_2.transform.position;
+        listLink[2].transform.position = MainGameScript.posE_3.transform.position;
+
+        for (int i = 3; i <= 7; i++)
+        {
+            listLink[i].SetActive(false);
+        }
+        for (int i = 0; i <= 2; i++)
+        {
+            listLink[i].SetActive(true);
+        }
+    }
+    public static void ListsUp()
+    {
+        List<GameObject> listLink = WordsAndDescriptionriptions.listOfCategories;
+        listLink.Insert(0, listLink[listLink.Count -1]);
+        listLink.RemoveAt(listLink.Count - 1);
+        ListsUpdate();
+    }
+    public static void ListsDown()
+    {
+        List<GameObject> listLink = WordsAndDescriptionriptions.listOfCategories;
+        listLink.Add(listLink[0]);
+        listLink.RemoveAt(0);
+        ListsUpdate();
     }
 }

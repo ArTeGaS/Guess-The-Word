@@ -63,9 +63,11 @@ public class GameFuncs : MonoBehaviour
     }
     public void BackToSections()
     {
-        MainGameScript.listOfAnimals.SetActive(true);
+        ListOfSections.ListsUpdate();
 
         MainGameScript.fromListToMenu.SetActive(true);
+        MainGameScript.listsUp.SetActive(true);
+        MainGameScript.listsDown.SetActive(true);
 
         MainGameScript.ingameBack.SetActive(false);
         MainGameScript.ingameNext.SetActive(false);

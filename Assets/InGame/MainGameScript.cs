@@ -32,12 +32,23 @@ public class MainGameScript : MonoBehaviour
     public CanvasGroup inGameCanvasGroupObj;
     public static CanvasGroup inGameCanvasGroup;
 
-    // Lists of Categoty
-    public GameObject listOfAnimalsObj;
-    public static GameObject listOfAnimals;
+    // ListsNavigation
+    public GameObject fromListToMenuObj,
+                        listsUpObj,
+                        listsDownObj;
 
-    public GameObject fromListToMenuObj;
-    public static GameObject fromListToMenu;
+    public static GameObject fromListToMenu,
+                                listsUp,
+                                listsDown;
+
+    //Lists position etalons
+    public GameObject posE_1_Obj
+                    , posE_2_Obj
+                    , posE_3_Obj;
+
+    public static GameObject posE_1
+                            , posE_2
+                            , posE_3;
 
     // TMP objects
     public TMP_InputField inputFieldTextObj;
@@ -47,6 +58,7 @@ public class MainGameScript : MonoBehaviour
     public RectTransform myCanvas;
     public RectTransform settingsFolder;
     public RectTransform inGameButtonsAndOther;
+    public RectTransform listOfGameCatefories;
 
     private void Start()
     {
@@ -67,13 +79,21 @@ public class MainGameScript : MonoBehaviour
         // TMP objects
         inputFieldText = inputFieldTextObj;
 
-        // Lists of Categoty
-        listOfAnimals = listOfAnimalsObj;
+        // ListsNavigation
 
         fromListToMenu = fromListToMenuObj;
+        listsUp = listsUpObj;
+        listsDown = listsDownObj;
+
+        //Lists position etalons
+        posE_1 = posE_1_Obj;
+        posE_2 = posE_2_Obj;
+        posE_3 = posE_3_Obj;
 
         // Canvas pos correctors
         settingsFolder.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
         inGameButtonsAndOther.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
+        listOfGameCatefories.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
+
     }
 }

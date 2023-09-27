@@ -26,6 +26,42 @@ MonoBehaviour:
     m_Localized: Settings
     m_Metadata:
       m_Items: []
+  - m_Id: 17052732106395648
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17052886683275264
+    m_Localized: Animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17052975665434624
+    m_Localized: Archeology
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17053166598541312
+    m_Localized: Architecture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17053354897625088
+    m_Localized: Cinema
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17053359293255680
+    m_Localized: Food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17053364762628096
+    m_Localized: Games
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17053368927571968
+    m_Localized: Middle Ages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17053372211712000
+    m_Localized: Plants
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

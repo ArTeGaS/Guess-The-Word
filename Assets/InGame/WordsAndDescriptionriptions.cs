@@ -21,12 +21,65 @@ public class WordsAndDescriptionriptions : MonoBehaviour
     public static int currentWord = 0;
     public static int wordsCount;
 
-    private void Start()
+    // Lists of Categoty
+    public GameObject listOfAnimalsObj,
+                        listOfArcheologyObj,
+                        listOfArchitectureObj,
+                        listOfCinemaObj,
+                        listOfFoodObj,
+                        listOfGamesObj,
+                        listOfMiddleAgesObj,
+                        listOfPlantsObj;
+
+    public static GameObject listOfAnimals,
+                                listOfArcheology,
+                                listOfArchitecture,
+                                listOfCinema,
+                                listOfFood,
+                                listOfGames,
+                                listOfMiddleAges,
+                                listOfPlants;
+
+    public static List<string> listsFlags =
+        new List<string> { "animalsListFirstRunFlag",
+                            "archeologyListFirstRunFlag",
+                            "architectureListFirstRunFlag",
+                            "cinemaListFirstRunFlag",
+                            "foodListFirstRunFlag",
+                            "gamesListFirstRunFlag",
+                            "middleAgeslsListFirstRunFlag",
+                            "plantsListFirstRunFlag"};
+    public static List<GameObject> listOfCategories;
+
+    public void Start()
     {
-        if (!PlayerPrefs.HasKey("animalsListFirstRunFlag"))
+        foreach (string key in listsFlags)
         {
-            PlayerPrefs.SetInt("animalsListFirstRunFlag", 0);
+            if (!PlayerPrefs.HasKey(key))
+            {
+                PlayerPrefs.SetInt(key, 0);
+            }
         }
+
+        // Lists of Categoty
+        listOfAnimals = listOfAnimalsObj;
+        listOfArcheology = listOfArcheologyObj;
+        listOfArchitecture = listOfArchitectureObj;
+        listOfCinema = listOfCinemaObj;
+        listOfFood = listOfFoodObj;
+        listOfGames = listOfGamesObj;
+        listOfMiddleAges = listOfMiddleAgesObj;
+        listOfPlants = listOfPlantsObj;
+
+        listOfCategories =
+            new List<GameObject> { listOfAnimals,
+                                    listOfArcheology,
+                                    listOfArchitecture,
+                                    listOfCinema,
+                                    listOfFood,
+                                    listOfGames,
+                                    listOfMiddleAges,
+                                    listOfPlants};
     }
 }
 
