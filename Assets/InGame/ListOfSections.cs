@@ -24,7 +24,6 @@ public class ListOfSections : MonoBehaviour
             case "uk-UA":
                 WordsAndDescriptionriptions.targetLang = "_ua";
                 WordsAndDescriptionriptions.anotherLang = "_us";
-                Debug.Log("Відкрита Українська локлізація");
                 break;
         }
 
@@ -36,9 +35,7 @@ public class ListOfSections : MonoBehaviour
                         await JSON_Control.LoadJsonFileNew(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
                     WordsAndDescriptionriptions.tempDictParallel =
                         await JSON_Control.LoadJsonFileNew(nameOfSection + WordsAndDescriptionriptions.anotherLang + "_upd");
-                    Debug.Log(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
                     PlayerPrefs.SetInt(playerPrefsId, 1);
-                    Debug.Log("Створено новий список");
                     break;
                 }
             case 1:
@@ -47,7 +44,6 @@ public class ListOfSections : MonoBehaviour
                         JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang + "_temp");
                     WordsAndDescriptionriptions.tempDictParallel =
                         JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.anotherLang + "_temp");
-                    Debug.Log("Відкрито існуючий список");
                     break;
                 }
         }

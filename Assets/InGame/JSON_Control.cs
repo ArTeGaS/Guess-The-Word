@@ -58,8 +58,6 @@ public class JSON_Control : MonoBehaviour
 
         string filePath = Path.Combine(locPath, fileName + ".json");
         File.WriteAllText(filePath, jsonText);
-
-        Debug.Log("File saved: " + filePath);
     }
 
     public static void SaveJsonFileNew(string fileName, Dictionary<string, string> data, string locPath)
@@ -68,8 +66,6 @@ public class JSON_Control : MonoBehaviour
 
         string filePath = Path.Combine(Application.persistentDataPath, fileName + ".json");
         File.WriteAllText(filePath, jsonText);
-
-        Debug.Log("File saved: " + filePath);
     }
     public static void JsonRestruct(string dictOld, string dictNew)
     {

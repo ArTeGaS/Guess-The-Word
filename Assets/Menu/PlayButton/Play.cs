@@ -15,7 +15,5 @@ public class Play : MonoBehaviour
         MainGameScript.fromListToMenu.SetActive(true);
         MainGameScript.listsUp.SetActive(true);
         MainGameScript.listsDown.SetActive(true);
-
-        Debug.Log(Application.persistentDataPath);
     }
 }
