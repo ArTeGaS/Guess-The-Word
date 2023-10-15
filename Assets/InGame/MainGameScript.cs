@@ -19,7 +19,8 @@ public class MainGameScript : MonoBehaviour
                         ingameSectionObj,
                         ingameTextObj,
                         ingameInputFieldObj,
-                        congratsTextObj;
+                        congratsTextObj,
+                        naviFrameObj;
 
     public static GameObject ingameBack,
                                 ingameNext,
@@ -27,7 +28,8 @@ public class MainGameScript : MonoBehaviour
                                 ingameSection,
                                 ingameText,
                                 ingameInputField,
-                                congratsText;
+                                congratsText,
+                                naviFrame;
 
     public CanvasGroup inGameCanvasGroupObj;
     public static CanvasGroup inGameCanvasGroup;
@@ -44,11 +46,13 @@ public class MainGameScript : MonoBehaviour
     //Lists position etalons
     public GameObject posE_1_Obj
                     , posE_2_Obj
-                    , posE_3_Obj;
+                    , posE_3_Obj
+                    , posE_4_Obj;
 
     public static GameObject posE_1
                             , posE_2
-                            , posE_3;
+                            , posE_3
+                            , posE_4;
 
     // TMP objects
     public TMP_InputField inputFieldTextObj;
@@ -74,6 +78,8 @@ public class MainGameScript : MonoBehaviour
         ingameInputField = ingameInputFieldObj;
         congratsText = congratsTextObj;
 
+        naviFrame = naviFrameObj;
+
         inGameCanvasGroup = inGameCanvasGroupObj;
 
         // TMP objects
@@ -89,6 +95,7 @@ public class MainGameScript : MonoBehaviour
         posE_1 = posE_1_Obj;
         posE_2 = posE_2_Obj;
         posE_3 = posE_3_Obj;
+        posE_4 = posE_4_Obj;
 
         // Canvas pos correctors
         settingsFolder.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
