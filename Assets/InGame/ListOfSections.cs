@@ -95,6 +95,7 @@ public class ListOfSections : MonoBehaviour
         MainGameScript.ingameSection.SetActive(true);
         MainGameScript.ingameText.SetActive(true);
         MainGameScript.ingameInputField.SetActive(true);
+        MainGameScript.naviFrame.SetActive(true);
 
         UpdateWordDescription();
     }
@@ -137,12 +138,13 @@ public class ListOfSections : MonoBehaviour
         listLink[0].transform.position = MainGameScript.posE_1.transform.position;
         listLink[1].transform.position = MainGameScript.posE_2.transform.position;
         listLink[2].transform.position = MainGameScript.posE_3.transform.position;
+        listLink[3].transform.position = MainGameScript.posE_4.transform.position;
 
-        for (int i = 3; i <= 7; i++)
+        for (int i = 4; i <= 7; i++)
         {
             listLink[i].SetActive(false);
         }
-        for (int i = 0; i <= 2; i++)
+        for (int i = 0; i <= 3; i++)
         {
             listLink[i].SetActive(true);
         }

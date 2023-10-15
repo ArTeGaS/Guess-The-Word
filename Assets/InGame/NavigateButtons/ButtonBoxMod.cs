@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonBoxMod : MonoBehaviour
 {
     public float alphaThreshold = 0.1f;
-    void Start()
+    void Awake()
     {
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = alphaThreshold;
     }

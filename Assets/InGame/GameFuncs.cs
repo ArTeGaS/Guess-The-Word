@@ -75,5 +75,6 @@ public class GameFuncs : MonoBehaviour
         MainGameScript.ingameSection.SetActive(false);
         MainGameScript.ingameText.SetActive(false);
         MainGameScript.ingameInputField.SetActive(false);
+        MainGameScript.naviFrame.SetActive(false);
     }
 }

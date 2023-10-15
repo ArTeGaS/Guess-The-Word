@@ -25,7 +25,7 @@ public class ScreenResConf : MonoBehaviour
         pos += new Vector3(0, sH * posModifier, 0);
         txtFon.transform.position = pos;
     }
-    private void Start()
+    private void StartWors()
     {
         sW = Screen.width;
         sH = Screen.height;
@@ -57,9 +57,5 @@ public class ScreenResConf : MonoBehaviour
                 TextBoxCorrect(424, -0.02f);
                 break;
         }
-    }
-    private void Update()
-    {
-
     }
 }
