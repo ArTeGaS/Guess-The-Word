@@ -31,6 +31,7 @@ public class ListOfSections : MonoBehaviour
         {
             case 0:
                 {
+                    Debug.Log("New");
                     WordsAndDescriptionriptions.tempDict =
                         await JSON_Control.LoadJsonFileNew(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
                     WordsAndDescriptionriptions.tempDictParallel =
@@ -40,6 +41,7 @@ public class ListOfSections : MonoBehaviour
                 }
             case 1:
                 {
+                    Debug.Log("Old");
                     WordsAndDescriptionriptions.tempDict =
                         JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang + "_temp");
                     WordsAndDescriptionriptions.tempDictParallel =
@@ -112,11 +114,9 @@ public class ListOfSections : MonoBehaviour
                                                                 WordsAndDescriptionriptions.listOfDiscriptionsParallel[i]);
         }
         JSON_Control.SaveJsonFileNew(WordsAndDescriptionriptions.currentLoadedListName,
-                                    WordsAndDescriptionriptions.tempDict,
-                                    JSON_Control.localTempPath);
+                                    WordsAndDescriptionriptions.tempDict);
         JSON_Control.SaveJsonFileNew(WordsAndDescriptionriptions.parallelLoadedListName,
-                                    WordsAndDescriptionriptions.tempDictParallel,
-                                    JSON_Control.localTempPath);
+                                    WordsAndDescriptionriptions.tempDictParallel);
     }
     public static void HideWordDescriprion()
     {

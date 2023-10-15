@@ -64,6 +64,7 @@ public class GameFuncs : MonoBehaviour
     public void BackToSections()
     {
         ListOfSections.ListsUpdate();
+        ListOfSections.SaveProgress();
 
         MainGameScript.fromListToMenu.SetActive(true);
         MainGameScript.listsUp.SetActive(true);
