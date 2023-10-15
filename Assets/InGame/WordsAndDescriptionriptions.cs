@@ -41,14 +41,14 @@ public class WordsAndDescriptionriptions : MonoBehaviour
                                 listOfPlants;
 
     public static List<string> listsFlags =
-        new List<string> { "animalsListFirstRunFlag",
-                            "archeologyListFirstRunFlag",
-                            "architectureListFirstRunFlag",
-                            "cinemaListFirstRunFlag",
-                            "foodListFirstRunFlag",
-                            "gamesListFirstRunFlag",
-                            "middleAgeslsListFirstRunFlag",
-                            "plantsListFirstRunFlag"};
+        new List<string> { "AnimalsListFirstRunFlag",
+                            "ArcheologyListFirstRunFlag",
+                            "ArchitectureListFirstRunFlag",
+                            "CinemaListFirstRunFlag",
+                            "FoodListFirstRunFlag",
+                            "GamesListFirstRunFlag",
+                            "MiddleAgesListFirstRunFlag",
+                            "PlantsListFirstRunFlag"};
     public static List<GameObject> listOfCategories;
 
     public void Start()
@@ -59,6 +59,7 @@ public class WordsAndDescriptionriptions : MonoBehaviour
             {
                 PlayerPrefs.SetInt(key, 0);
             }
+            Debug.Log(PlayerPrefs.GetInt(key));
         }
 
         // Lists of Categoty
