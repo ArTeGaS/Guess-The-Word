@@ -13,6 +13,8 @@ public class ListOfSections : MonoBehaviour
         WordsAndDescriptionriptions.listOfWordsParallel = new List<string>();
         WordsAndDescriptionriptions.listOfDiscriptionsParallel = new List<string>();
 
+        WordsCounters.SelectedSection = nameOfSection;
+
         string playerPrefsId = nameOfSection + "ListFirstRunFlag";
 
         switch (PlayerPrefs.GetString("PlayerLang"))
@@ -31,7 +33,6 @@ public class ListOfSections : MonoBehaviour
         {
             case 0:
                 {
-                    Debug.Log("New");
                     WordsAndDescriptionriptions.tempDict =
                         await JSON_Control.LoadJsonFileNew(nameOfSection + WordsAndDescriptionriptions.targetLang + "_upd");
                     WordsAndDescriptionriptions.tempDictParallel =
@@ -41,7 +42,6 @@ public class ListOfSections : MonoBehaviour
                 }
             case 1:
                 {
-                    Debug.Log("Old");
                     WordsAndDescriptionriptions.tempDict =
                         JSON_Control.LoadJsonFile(nameOfSection + WordsAndDescriptionriptions.targetLang + "_temp");
                     WordsAndDescriptionriptions.tempDictParallel =
@@ -96,6 +96,7 @@ public class ListOfSections : MonoBehaviour
         MainGameScript.ingameHints.SetActive(true);
         MainGameScript.ingameSection.SetActive(true);
         MainGameScript.ingameText.SetActive(true);
+        MainGameScript.ingameTextFon.SetActive(true);
         MainGameScript.ingameInputField.SetActive(true);
         MainGameScript.naviFrame.SetActive(true);
 
@@ -147,6 +148,29 @@ public class ListOfSections : MonoBehaviour
         for (int i = 0; i <= 3; i++)
         {
             listLink[i].SetActive(true);
+        }
+
+    }
+    public static void CountersUpdate()
+    {
+        List<GameObject> listLink = WordsAndDescriptionriptions.listOfCategories;
+        foreach(GameObject obj in listLink)
+        {
+            obj.SetActive(true);
+            //CanvasGroup comp = obj.GetComponent<CanvasGroup>();
+            //comp.alpha = 0.0f;
+        }
+        WordsCounters.animalsCounterObj.text = PlayerPrefs.GetInt("AnimalsCount") + "/" + WordsCounters.animalsFull;
+        WordsCounters.archeologyCounterObj.text = PlayerPrefs.GetInt("ArcheologyCount") + "/" + WordsCounters.archeologyFull;
+        WordsCounters.architectureCounterObj.text = PlayerPrefs.GetInt("ArchitectureCount") + "/" + WordsCounters.architectureFull;
+        WordsCounters.cinemaCounterObj.text = PlayerPrefs.GetInt("CinemaCount") + "/" + WordsCounters.cinemaFull;
+        WordsCounters.foodCounterObj.text = PlayerPrefs.GetInt("FoodCount") + "/" + WordsCounters.foodFull;
+        WordsCounters.gamesCounterObj.text = PlayerPrefs.GetInt("GamesCount") + "/" + WordsCounters.gamesFull;
+        WordsCounters.middleAgesCounterObj.text = PlayerPrefs.GetInt("MiddleAgesCount") + "/" + WordsCounters.middleAgesFull;
+        WordsCounters.plantCounterObj.text = PlayerPrefs.GetInt("PlantsCount") + "/" + WordsCounters.plantsFull;
+        foreach(GameObject obj in listLink)
+        {
+            obj.SetActive(false);
         }
     }
     public static void ListsUp()
