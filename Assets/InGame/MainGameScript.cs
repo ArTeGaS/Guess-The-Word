@@ -18,6 +18,7 @@ public class MainGameScript : MonoBehaviour
                         ingameHintsObj,
                         ingameSectionObj,
                         ingameTextObj,
+                        ingameTextFonObj,
                         ingameInputFieldObj,
                         congratsTextObj,
                         naviFrameObj;
@@ -27,6 +28,7 @@ public class MainGameScript : MonoBehaviour
                                 ingameHints,
                                 ingameSection,
                                 ingameText,
+                                ingameTextFon,
                                 ingameInputField,
                                 congratsText,
                                 naviFrame;
@@ -75,6 +77,7 @@ public class MainGameScript : MonoBehaviour
         ingameHints = ingameHintsObj;
         ingameSection = ingameSectionObj;
         ingameText = ingameTextObj;
+        ingameTextFon = ingameTextFonObj;
         ingameInputField = ingameInputFieldObj;
         congratsText = congratsTextObj;
 
@@ -98,9 +101,9 @@ public class MainGameScript : MonoBehaviour
         posE_4 = posE_4_Obj;
 
         // Canvas pos correctors
-        settingsFolder.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
-        inGameButtonsAndOther.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
-        listOfGameCatefories.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
+        //settingsFolder.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
+        //inGameButtonsAndOther.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
+        //listOfGameCatefories.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
 
     }
 }

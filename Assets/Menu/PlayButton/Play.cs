@@ -10,6 +10,7 @@ public class Play : MonoBehaviour
         MenuMainScript.settingsButton.SetActive(false);
         MenuMainScript.exitButton.SetActive(false);
 
+        ListOfSections.CountersUpdate();
         ListOfSections.ListsUpdate();
 
         MainGameScript.fromListToMenu.SetActive(true);

@@ -59,7 +59,6 @@ public class WordsAndDescriptionriptions : MonoBehaviour
             {
                 PlayerPrefs.SetInt(key, 0);
             }
-            Debug.Log(PlayerPrefs.GetInt(key));
         }
 
         // Lists of Categoty

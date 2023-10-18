@@ -13,6 +13,7 @@ public class GameFuncs : MonoBehaviour
     }
     public IEnumerator CongratsEvent()
     {
+        PlayerPrefs.SetInt(WordsCounters.SelectedSection + "Count", PlayerPrefs.GetInt(WordsCounters.SelectedSection) + 1);
         MainGameScript.inGameCanvasGroup.blocksRaycasts = false;
         ListOfSections.HideWordDescriprion();
         MainGameScript.congratsText.SetActive(true);
@@ -63,6 +64,7 @@ public class GameFuncs : MonoBehaviour
     }
     public void BackToSections()
     {
+        ListOfSections.CountersUpdate();
         ListOfSections.ListsUpdate();
         ListOfSections.SaveProgress();
 
@@ -75,6 +77,7 @@ public class GameFuncs : MonoBehaviour
         MainGameScript.ingameHints.SetActive(false);
         MainGameScript.ingameSection.SetActive(false);
         MainGameScript.ingameText.SetActive(false);
+        MainGameScript.ingameTextFon.SetActive(false);
         MainGameScript.ingameInputField.SetActive(false);
         MainGameScript.naviFrame.SetActive(false);
     }

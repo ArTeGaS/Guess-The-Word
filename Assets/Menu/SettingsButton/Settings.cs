@@ -19,6 +19,10 @@ public class Settings : MonoBehaviour
         {
             PlayerPrefs.SetInt(tempList, 0);
         }
+        foreach (var counterName in WordsCounters.countersData)
+        {
+            PlayerPrefs.SetInt(counterName, 0);
+        }
     }
     public void BackToMenu()
     {
