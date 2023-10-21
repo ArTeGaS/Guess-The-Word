@@ -68,17 +68,8 @@ public class GameFuncs : MonoBehaviour
         ListOfSections.ListsUpdate();
         ListOfSections.SaveProgress();
 
-        MainGameScript.fromListToMenu.SetActive(true);
-        MainGameScript.listsUp.SetActive(true);
-        MainGameScript.listsDown.SetActive(true);
+        MainGameScript.sectionsWindow.SetActive(true);
 
-        MainGameScript.ingameBack.SetActive(false);
-        MainGameScript.ingameNext.SetActive(false);
-        MainGameScript.ingameHints.SetActive(false);
-        MainGameScript.ingameSection.SetActive(false);
-        MainGameScript.ingameText.SetActive(false);
-        MainGameScript.ingameTextFon.SetActive(false);
-        MainGameScript.ingameInputField.SetActive(false);
-        MainGameScript.naviFrame.SetActive(false);
+        MainGameScript.gameWindow.SetActive(false);
     }
 }

@@ -67,38 +67,25 @@ public class ListOfSections : MonoBehaviour
     }
     public static void FromListToMenu()
     {
-        MainGameScript.fromListToMenu.SetActive(false);
-        MainGameScript.listsUp.SetActive(false);
-        MainGameScript.listsDown.SetActive(false);
+        MainGameScript.sectionsWindow.SetActive(false);
 
         foreach( var tempList in WordsAndDescriptionriptions.listOfCategories)
         {
             tempList.SetActive(false);
         }
 
-        MenuMainScript.playButton.SetActive(true);
-        MenuMainScript.settingsButton.SetActive(true);
-        MenuMainScript.exitButton.SetActive(true);
+        MainGameScript.mainMenu.SetActive(true);
     }
     public static void FromListToGame()
     {
-        MainGameScript.fromListToMenu.SetActive(false);
-        MainGameScript.listsUp.SetActive(false);
-        MainGameScript.listsDown.SetActive(false);
+        MainGameScript.sectionsWindow.SetActive(false);
 
         foreach (var tempList in WordsAndDescriptionriptions.listOfCategories)
         {
             tempList.SetActive(false);
         }
 
-        MainGameScript.ingameBack.SetActive(true);
-        MainGameScript.ingameNext.SetActive(true);
-        MainGameScript.ingameHints.SetActive(true);
-        MainGameScript.ingameSection.SetActive(true);
-        MainGameScript.ingameText.SetActive(true);
-        MainGameScript.ingameTextFon.SetActive(true);
-        MainGameScript.ingameInputField.SetActive(true);
-        MainGameScript.naviFrame.SetActive(true);
+        MainGameScript.gameWindow.SetActive(true);
 
         UpdateWordDescription();
     }
@@ -153,13 +140,6 @@ public class ListOfSections : MonoBehaviour
     }
     public static void CountersUpdate()
     {
-        List<GameObject> listLink = WordsAndDescriptionriptions.listOfCategories;
-        foreach(GameObject obj in listLink)
-        {
-            obj.SetActive(true);
-            //CanvasGroup comp = obj.GetComponent<CanvasGroup>();
-            //comp.alpha = 0.0f;
-        }
         WordsCounters.animalsCounterObj.text = PlayerPrefs.GetInt("AnimalsCount") + "/" + WordsCounters.animalsFull;
         WordsCounters.archeologyCounterObj.text = PlayerPrefs.GetInt("ArcheologyCount") + "/" + WordsCounters.archeologyFull;
         WordsCounters.architectureCounterObj.text = PlayerPrefs.GetInt("ArchitectureCount") + "/" + WordsCounters.architectureFull;
@@ -168,10 +148,6 @@ public class ListOfSections : MonoBehaviour
         WordsCounters.gamesCounterObj.text = PlayerPrefs.GetInt("GamesCount") + "/" + WordsCounters.gamesFull;
         WordsCounters.middleAgesCounterObj.text = PlayerPrefs.GetInt("MiddleAgesCount") + "/" + WordsCounters.middleAgesFull;
         WordsCounters.plantCounterObj.text = PlayerPrefs.GetInt("PlantsCount") + "/" + WordsCounters.plantsFull;
-        foreach(GameObject obj in listLink)
-        {
-            obj.SetActive(false);
-        }
     }
     public static void ListsUp()
     {
