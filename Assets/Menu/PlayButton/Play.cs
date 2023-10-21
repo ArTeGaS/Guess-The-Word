@@ -6,15 +6,11 @@ public class Play : MonoBehaviour
 {
     public void PlayGameButton()
     {
-        MenuMainScript.playButton.SetActive(false);
-        MenuMainScript.settingsButton.SetActive(false);
-        MenuMainScript.exitButton.SetActive(false);
+        MainGameScript.mainMenu.SetActive(false);
 
         ListOfSections.CountersUpdate();
         ListOfSections.ListsUpdate();
 
-        MainGameScript.fromListToMenu.SetActive(true);
-        MainGameScript.listsUp.SetActive(true);
-        MainGameScript.listsDown.SetActive(true);
+        MainGameScript.sectionsWindow.SetActive(true);
     }
 }

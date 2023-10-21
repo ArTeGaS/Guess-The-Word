@@ -60,13 +60,20 @@ public class MainGameScript : MonoBehaviour
     public TMP_InputField inputFieldTextObj;
     public static TMP_InputField inputFieldText;
 
-    //Canvas pos correctors
-    public RectTransform myCanvas;
-    public RectTransform settingsFolder;
-    public RectTransform inGameButtonsAndOther;
-    public RectTransform listOfGameCatefories;
+    // Game windows
+    public GameObject mainMenuObj,
+                        insideSettingsMenuObj,
+                        sectionsWindowObj,
+                        gameWindowObj,
+                        hintsWindowObj;
 
-    private void Start()
+    public static GameObject mainMenu,
+                        insideSettingsMenu,
+                        sectionsWindow,
+                        gameWindow,
+                        hintsWindow;
+
+    private void Awake()
     {
         // Main text window
         textMeshProS = textMeshPro;
@@ -94,16 +101,17 @@ public class MainGameScript : MonoBehaviour
         listsUp = listsUpObj;
         listsDown = listsDownObj;
 
-        //Lists position etalons
+        // Lists position etalons
         posE_1 = posE_1_Obj;
         posE_2 = posE_2_Obj;
         posE_3 = posE_3_Obj;
         posE_4 = posE_4_Obj;
 
-        // Canvas pos correctors
-        //settingsFolder.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
-        //inGameButtonsAndOther.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
-        //listOfGameCatefories.sizeDelta = new Vector2(myCanvas.rect.width, myCanvas.rect.height);
-
+        // Game windows
+        mainMenu = mainMenuObj;
+        insideSettingsMenu = insideSettingsMenuObj;
+        sectionsWindow = sectionsWindowObj;
+        gameWindow = gameWindowObj;
+        hintsWindow = hintsWindowObj;
     }
 }

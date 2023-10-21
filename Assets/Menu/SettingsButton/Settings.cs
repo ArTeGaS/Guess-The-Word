@@ -6,12 +6,8 @@ public class Settings : MonoBehaviour
 {
     public void SettingsGameButton()
     {
-        MenuMainScript.playButton.SetActive(false);
-        MenuMainScript.settingsButton.SetActive(false);
-        MenuMainScript.exitButton.SetActive(false);
-
-        MenuMainScript.backToMenu.SetActive(true);
-        MenuMainScript.resetProgress.SetActive(true);
+        MainGameScript.mainMenu.SetActive(false);
+        MainGameScript.insideSettingsMenu.SetActive(true);
     }
     public void ResetGameProgressButton()
     {
@@ -26,11 +22,7 @@ public class Settings : MonoBehaviour
     }
     public void BackToMenu()
     {
-        MenuMainScript.backToMenu.SetActive(false);
-        MenuMainScript.resetProgress.SetActive(false);
-
-        MenuMainScript.playButton.SetActive(true);
-        MenuMainScript.settingsButton.SetActive(true);
-        MenuMainScript.exitButton.SetActive(true);
+        MainGameScript.mainMenu.SetActive(true);
+        MainGameScript.insideSettingsMenu.SetActive(false);
     }
 }
