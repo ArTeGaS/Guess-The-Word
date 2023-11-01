@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class Settings : MonoBehaviour
 {
@@ -11,13 +13,21 @@ public class Settings : MonoBehaviour
     }
     public void ResetGameProgressButton()
     {
-        foreach( var tempList in WordsAndDescriptionriptions.listsFlags )
+        MainGameScript.insideSettingsMenu.SetActive(false);
+        MenuMainScript.yesNoReset.SetActive(true);
+    }
+    public void ChangeLanguage()
+    {
+        switch (PlayerPrefs.GetString("PlayerLang"))
         {
-            PlayerPrefs.SetInt(tempList, 0);
-        }
-        foreach (var counterName in WordsCounters.countersData)
-        {
-            PlayerPrefs.SetInt(counterName, 0);
+            case "en-US":
+                PlayerPrefs.SetString("PlayerLang", "uk-UA");
+                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+                break;
+            case "uk-UA":
+                PlayerPrefs.SetString("PlayerLang", "en-US");
+                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
+                break;
         }
     }
     public void BackToMenu()

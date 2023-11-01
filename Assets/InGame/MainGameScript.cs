@@ -73,13 +73,13 @@ public class MainGameScript : MonoBehaviour
                         gameWindow,
                         hintsWindow;
 
-    private void Awake()
+    private void Start()
     {
         // Main text window
         textMeshProS = textMeshPro;
 
         // Game objects
-        ingameBack = ingameBackObj;
+        ingameBack =  ingameBackObj;
         ingameNext = ingameNextObj;
         ingameHints = ingameHintsObj;
         ingameSection = ingameSectionObj;

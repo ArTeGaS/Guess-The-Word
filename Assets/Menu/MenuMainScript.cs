@@ -8,6 +8,7 @@ public class MenuMainScript : MonoBehaviour
                     settingsButtonObj,
                     resetProgressObj,
                     backToMenuObj,
+                    yesNoResetObj,
                     exitButtonObj;
 
 
@@ -16,6 +17,7 @@ public class MenuMainScript : MonoBehaviour
                             settingsButton,
                             resetProgress,
                             backToMenu,
+                            yesNoReset,
                             exitButton;
 
     private void Start()
@@ -24,6 +26,7 @@ public class MenuMainScript : MonoBehaviour
         settingsButton = settingsButtonObj;
         resetProgress = resetProgressObj;
         backToMenu = backToMenuObj;
+        yesNoReset = yesNoResetObj;
         exitButton = exitButtonObj;
 
         playButton.SetActive(true);

@@ -60,7 +60,75 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 17053375504240640
-    m_Key: New Entry 5
+    m_Key: NumOfLetters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26524268957716480
+    m_Key: FirstLetter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26524343381446656
+    m_Key: LastLetter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26524577830457344
+    m_Key: WrongAnswers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27239314478256128
+    m_Key: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27239318873886720
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27239322837504000
+    m_Key: GameRules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27243098256363520
+    m_Key: NumOfLettersButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27243172235497472
+    m_Key: FirstLetterButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27243218272178176
+    m_Key: LastLetterButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27243251927273472
+    m_Key: WrongAnswersButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27243794372415488
+    m_Key: HintsGuide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27252952085745664
+    m_Key: Congrats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28949198030688256
+    m_Key: YesButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28949247489921024
+    m_Key: NoButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28949697219973120
+    m_Key: AreYouSure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28957877396230144
+    m_Key: LangButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29017318363680768
+    m_Key: EnterTheWord
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -13,7 +13,7 @@ public class JSON_Control : MonoBehaviour
 
     public static TextAsset _cachedObject;
 
-    public static Dictionary<string, string> LoadJsonFile(string fileName, string locPath= "Assets/InGame/CustomTables/Upd")
+    public static Dictionary<string, string> LoadAndroidJsonFile(string fileName, string locPath= "Assets/InGame/CustomTables/Upd")
     {
         Dictionary<string, string> data = new Dictionary<string, string>();
 
@@ -31,7 +31,7 @@ public class JSON_Control : MonoBehaviour
 
         return data;
     }
-    public static async Task<Dictionary<string, string>> LoadJsonFileNew(string assetId)
+    public static async Task<Dictionary<string, string>> LoadAddressableJsonFile(string assetId)
     {
         Dictionary<string, string> data = new Dictionary<string, string>();
 
@@ -60,7 +60,7 @@ public class JSON_Control : MonoBehaviour
         File.WriteAllText(filePath, jsonText);
     }
 
-    public static void SaveJsonFileNew(string fileName, Dictionary<string, string> data)
+    public static void SaveAndroidJsonFile(string fileName, Dictionary<string, string> data)
     {
         string jsonText = JsonConvert.SerializeObject(data, Formatting.Indented);
 
@@ -69,7 +69,7 @@ public class JSON_Control : MonoBehaviour
     }
     public static void JsonRestruct(string dictOld, string dictNew)
     {
-        Dictionary<string, string> dictOldCase = LoadJsonFile(dictOld, "Assets/InGame/CustomTables/Old");
+        Dictionary<string, string> dictOldCase = LoadAndroidJsonFile(dictOld, "Assets/InGame/CustomTables/Old");
         Dictionary<string, string> temp = new Dictionary<string, string> { };
         List<string> tempList = new List<string>();
         foreach (var pair in dictOldCase)
