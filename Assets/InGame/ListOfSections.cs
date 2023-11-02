@@ -7,7 +7,7 @@ using UnityEngine.Localization.Settings;
 
 public class ListOfSections : MonoBehaviour
 {
-    public static async void ListOf(string nameOfSection)
+    public async void ListOf(string nameOfSection)
     {
         WordsAndDescriptions.listOfWords = new List<string>();
         WordsAndDescriptions.listOfDiscriptions = new List<string>();
@@ -67,7 +67,7 @@ public class ListOfSections : MonoBehaviour
         }
         FromListToGame();
     }
-    public static void FromListToMenu()
+    public void FromListToMenu()
     {
         MainGameScript.sectionsWindow.SetActive(false);
 
