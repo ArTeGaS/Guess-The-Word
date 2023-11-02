@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameFuncs : MonoBehaviour
@@ -93,6 +92,12 @@ public class GameFuncs : MonoBehaviour
         MainGameScript.gameWindow.SetActive(false);
 
         SectionsBlocker();
+
+        if (AdMobScript.adCoroutine != null)
+        {
+            StopCoroutine(AdMobScript.adCoroutine);
+            AdMobScript.adCoroutine = null;
+        }
     }
 
     public void HintsButton()
