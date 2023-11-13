@@ -12,6 +12,7 @@ public class GameFuncs : MonoBehaviour
         if (MainGameScript.inputFieldText.text == WordsAndDescriptions.listOfWords[WordsAndDescriptions.currentWord])
         {
             StartCoroutine(CongratsEvent());
+            Hints_script.HintsOff();
         }
         else if (MainGameScript.inputFieldText.text != WordsAndDescriptions.listOfWords[WordsAndDescriptions.currentWord])
         {
@@ -65,6 +66,7 @@ public class GameFuncs : MonoBehaviour
                 WordsAndDescriptions.currentWord = 0;
                 break;
         }
+        Hints_script.HintsOff();
         ListOfSections.UpdateWordDescription();
     }
     public void BackWordButton()
@@ -78,6 +80,7 @@ public class GameFuncs : MonoBehaviour
                 WordsAndDescriptions.currentWord = ListOfSections.CalculateAllWords() -1;
                 break;
         }
+        Hints_script.HintsOff();
         ListOfSections.UpdateWordDescription();
     }
     public void BackToSections()
@@ -98,13 +101,16 @@ public class GameFuncs : MonoBehaviour
             StopCoroutine(AdMobScript.adCoroutine);
             AdMobScript.adCoroutine = null;
         }
+        Hints_script.HintsOff();
     }
 
-    public void HintsButton()
+    public static void HintsButton()
     {
         MainGameScript.gameWindow.SetActive(false);
 
         MainGameScript.hintsWindow.SetActive(true);
+
+        AdMobScript.HintsModAdd();
     }
     public void CloseHintsButton()
     {

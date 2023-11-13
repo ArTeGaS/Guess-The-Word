@@ -71,6 +71,12 @@ public class MainGameScript : MonoBehaviour
                         gameWindow,
                         hintsWindow;
 
+    public TextMeshProUGUI hintsText;
+    public static TextMeshProUGUI hintsTextPub;
+
+    public TextMeshProUGUI sectionsText;
+    public static TextMeshProUGUI sectionsTextPub;
+
     private void Start()
     {
         // Main text window
@@ -111,5 +117,8 @@ public class MainGameScript : MonoBehaviour
         sectionsWindow = sectionsWindowObj;
         gameWindow = gameWindowObj;
         hintsWindow = hintsWindowObj;
+
+        hintsTextPub = hintsText;
+        sectionsTextPub = sectionsText;
     }
 }

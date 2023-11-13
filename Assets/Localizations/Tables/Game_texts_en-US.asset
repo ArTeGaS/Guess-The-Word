@@ -112,23 +112,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27243794372415488
-    m_Localized: '"There are four options for hints in this menu.
+    m_Localized: 'There are four options for hints in this menu.
 
-      "Number
-      of letters" - will show you the length of the word.
+      "Number of
+      letters" - will show you the length of the word.
 
       "First" and "Last"
       - will reveal the first and/or last letter of the word.
 
       "Wrong answers"
-      - will show unsuccessful attempts to guess.
-
-
-      Importantly:
-
-      Hints
-      remain on when you switch words, so turn them off in a timely manner if you
-      don''t plan on using them all the time."'
+      - will show unsuccessful attempts to guess.'
     m_Metadata:
       m_Items: []
   - m_Id: 27252952085745664
@@ -155,6 +148,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 29017318363680768
     m_Localized: Enter the word
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32831119991164928
+    m_Localized: To access hints for this word, you need to watch an advertisement.
+      Do you agree?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32858192239579136
+    m_Localized: Background
     m_Metadata:
       m_Items: []
   references:
