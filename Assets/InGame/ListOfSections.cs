@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
@@ -66,6 +64,8 @@ public class ListOfSections : MonoBehaviour
             WordsAndDescriptions.listOfDiscriptionsParallel.Add(pair.Value);
         }
         FromListToGame();
+        AdMobScript.LoadInterstitialAd();
+        AdMobScript.LoadBannerAds();
     }
     public void FromListToMenu()
     {

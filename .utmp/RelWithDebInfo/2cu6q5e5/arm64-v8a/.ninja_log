@@ -1,3 +1,5 @@
 # ninja log v5
-0	176	7205501711718634	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f7f38772fd46a39f
-178	352	7205501713051619	C:/OOTDDir/Unity/Unity Projects/Guess the word/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2cu6q5e5/obj/arm64-v8a/libswappywrapper.so	a2f2d072ad69df51
+2	117	7207177296055785	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f7f38772fd46a39f
+118	224	7207177296805838	C:/OOTDDir/Unity/Unity Projects/Guess the word/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2cu6q5e5/obj/arm64-v8a/libswappywrapper.so	a2f2d072ad69df51
+2	163	7207185460735360	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f7f38772fd46a39f
+163	315	7207185461797042	C:/OOTDDir/Unity/Unity Projects/Guess the word/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2cu6q5e5/obj/arm64-v8a/libswappywrapper.so	a2f2d072ad69df51
