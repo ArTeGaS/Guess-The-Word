@@ -1,0 +1,5 @@
+# ninja log v5
+110	223	7207167787512431	C:/OOTDDir/Unity/Unity Projects/Guess the word/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/1t1f633k/obj/armeabi-v7a/libswappywrapper.so	a496c7525323efc5
+2	110	7207167786741077	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4f2bffbb445411b9
+2	106	7207181288625971	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4f2bffbb445411b9
+106	220	7207181289410167	C:/OOTDDir/Unity/Unity Projects/Guess the word/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/1t1f633k/obj/armeabi-v7a/libswappywrapper.so	a496c7525323efc5

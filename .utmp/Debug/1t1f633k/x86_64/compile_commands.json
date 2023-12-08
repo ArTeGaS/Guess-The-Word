@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/OOTDDir/Unity/Unity Projects/Guess the word/.utmp/Debug/1t1f633k/x86_64",
+  "command": "C:\\OOTDDir\\Unity\\2023.1.17f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\NDK\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android24 --sysroot=C:/OOTDDir/Unity/2023.1.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DEXTERNAL_FRAME_PACING_CODE -Dswappywrapper_EXPORTS -I\"C:/OOTDDir/Unity/Unity Projects/Guess the word/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing\" -isystem C:/Users/user/.gradle/caches/transforms-3/121b6b243cedf8bef90d462440e4bf24/transformed/jetified-games-frame-pacing-1.10.0/prefab/modules/swappy_static/include -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -g  -fno-limit-debug-info -fPIC -o FramePacing\\CMakeFiles\\swappywrapper.dir\\UnitySwappyWrapper.cpp.o -c \"C:\\OOTDDir\\Unity\\Unity Projects\\Guess the word\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\FramePacing\\UnitySwappyWrapper.cpp\"",
+  "file": "C:\\OOTDDir\\Unity\\Unity Projects\\Guess the word\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\FramePacing\\UnitySwappyWrapper.cpp"
+}
+]

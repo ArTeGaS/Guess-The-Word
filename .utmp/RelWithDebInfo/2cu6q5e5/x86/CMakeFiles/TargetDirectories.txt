@@ -1,0 +1,5 @@
+C:/OOTDDir/Unity/Unity Projects/Guess the word/.utmp/RelWithDebInfo/2cu6q5e5/x86/CMakeFiles/edit_cache.dir
+C:/OOTDDir/Unity/Unity Projects/Guess the word/.utmp/RelWithDebInfo/2cu6q5e5/x86/CMakeFiles/rebuild_cache.dir
+C:/OOTDDir/Unity/Unity Projects/Guess the word/.utmp/RelWithDebInfo/2cu6q5e5/x86/FramePacing/CMakeFiles/swappywrapper.dir
+C:/OOTDDir/Unity/Unity Projects/Guess the word/.utmp/RelWithDebInfo/2cu6q5e5/x86/FramePacing/CMakeFiles/edit_cache.dir
+C:/OOTDDir/Unity/Unity Projects/Guess the word/.utmp/RelWithDebInfo/2cu6q5e5/x86/FramePacing/CMakeFiles/rebuild_cache.dir
