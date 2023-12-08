@@ -4,11 +4,11 @@ using System;
 
 public class AdMobScript : MonoBehaviour
 {
-    public string appId = "ca-app-pub-3227481332211386~5221961576";
+    public string appId = "";
 
-    public static string bannerId = "ca-app-pub-3227481332211386/9296937953";
-    public static string interId = "ca-app-pub-3227481332211386/7695295250";
-    public static string rewardedId = "ca-app-pub-3227481332211386/8987076060";
+    public static string bannerId = "ca-app-pub-3940256099942544/6300978111";
+    public static string interId = "ca-app-pub-3940256099942544/1033173712";
+    public static string rewardedId = "ca-app-pub-3940256099942544/5224354917";
 
     public static AdSize adSize = AdSize.GetPortraitAnchoredAdaptiveBannerAdSizeWithWidth(AdSize.FullWidth);
 

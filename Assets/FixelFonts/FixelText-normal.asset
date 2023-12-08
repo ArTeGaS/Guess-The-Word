@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: FixelText-Regular SDF2
+  m_Name: FixelText-normal
   m_EditorClassIdentifier: 
-  hashCode: -1506389193
+  hashCode: 880115677
   material: {fileID: 7349579550002158018}
-  materialHashCode: -577263177
+  materialHashCode: -1844264227
   m_Version: 1.1.0
   m_SourceFontFileGUID: 3b531989a88a7e0438c047f4406a2ea8
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 3b531989a88a7e0438c047f4406a2ea8, type: 3}

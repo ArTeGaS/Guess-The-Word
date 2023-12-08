@@ -64,8 +64,8 @@ public class ListOfSections : MonoBehaviour
             WordsAndDescriptions.listOfDiscriptionsParallel.Add(pair.Value);
         }
         FromListToGame();
-        AdMobScript.LoadInterstitialAd();
-        AdMobScript.LoadBannerAds();
+        //AdMobScript.LoadInterstitialAd();
+        //AdMobScript.LoadBannerAds();
     }
     public void FromListToMenu()
     {
