@@ -1,5 +1,34 @@
 # Guess-The-Word
-My words guessing game created on Unity for Google Play.
-Change the branch to Master to see the project files.
 
-Free ver: https://play.google.com/store/apps/details?id=com.ProbablyDisturbed.GuessTheWordFree
+Archived Unity word guessing game prototype and Android publishing experiment.
+
+## Status
+
+Prototype / archive. The project was used to explore a small Unity game loop and the Android build / publishing workflow. It should not be treated as a currently maintained live store release.
+
+## Repository layout
+
+The default `main` branch contains this short repository overview.
+
+The Unity project files are kept on the `master` branch:
+
+```bash
+git checkout master
+```
+
+## What is included on `master`
+
+- Unity project files and settings
+- Word guessing game assets and scripts
+- Localization / addressables-related project data
+- Android build and publishing experiment artifacts
+
+## Opening the project
+
+The Unity project on `master` was last worked with Unity `2022.3.12f1`.
+
+After switching to `master`, open the repository folder in Unity Hub and let Unity restore packages before running the project.
+
+## Notes
+
+This is an early project and an archive of the development process. Some generated files and build artifacts may still be present in the repository history.
