@@ -1,6 +1,6 @@
 # Guess-The-Word
 
-Archived Unity word guessing game prototype and Android publishing experiment.
+Archived Unity word guessing game prototype and Android publishing process example.
 
 ## Status
 
@@ -21,7 +21,7 @@ git checkout master
 - Unity project files and settings
 - Word guessing game assets and scripts
 - Localization / addressables-related project data
-- Android build and publishing experiment artifacts
+- Android build and publishing process artifacts
 
 ## Opening the project
 
